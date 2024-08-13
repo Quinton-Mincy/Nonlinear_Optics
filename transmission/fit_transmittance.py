@@ -1,3 +1,6 @@
+#Utilizes much of the code in the repository linked below by Matthew Larson:
+#https://github.com/MTLphys/Thin-Film-Interference-measurements
+
 import numpy as np
 import matplotlib.pyplot as plt
 from scipy.optimize import curve_fit
