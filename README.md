@@ -7,3 +7,6 @@ This codebaser uses some existing code from Matthew Larson, and he also contribu
 
 <img width="1257" alt="Screen Shot 2024-08-13 at 5 13 40 PM" src="https://github.com/user-attachments/assets/715745be-170a-4d5e-ad6c-59de55ee6c3c">
 
+## Example output from fit_transmittance,py
+
+<img width="635" alt="Screen Shot 2024-08-13 at 5 20 18 PM" src="https://github.com/user-attachments/assets/7918a232-e3eb-45d0-b810-658e068748ff">
