@@ -1,7 +1,7 @@
 This repository contains code for analyzing transmission data to estimage thickness of thin films. There is also code to control
 a motorized stage while taking measurements from two multimeters to gauge nonlinear optical properties.
 
-This codebaser uses some existing code from Matthew Larson, and he also contributed to much of the new code. Check him out [@MTLphys](https://github.com/MTLphys).
+This codebase uses some existing code from Matthew Larson, and he also contributed to much of the new code. Check him out [@MTLphys](https://github.com/MTLphys).
 
 ## Example output from read_transmission.py
 
