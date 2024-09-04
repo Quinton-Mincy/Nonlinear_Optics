@@ -47,7 +47,7 @@ def process_sample(sample_path,sample_label):
     # Read all CSV files matching the pattern in the specified directory
     measurement_files = glob.glob(os.path.join(sample_path, 'MeasureAlq3_*.csv'))
     reference_files = glob.glob(os.path.join(sample_path, 'ReferenceGlass_*.csv'))
-
+    print(os.path.join(sample_path, 'MeasureAlq3_*.csv'))
     # Ensure each measurement file has a corresponding reference file
     if len(measurement_files) != len(reference_files):
         raise ValueError("The number of measurement files does not match the number of reference files.")
@@ -76,7 +76,7 @@ def process_sample(sample_path,sample_label):
 def plot_data(ax, all_wavelengths, all_intensities, sample_label):
     """Plot the data from all files and their average on a given Axes object."""
 
-    output_path = f"./csv_dir/{sample_label}"
+    output_path = f".\csv_dir\{sample_label}"
     # Plot each file's data in different colors
     for i, (wavelengths, intensities) in enumerate(zip(all_wavelengths, all_intensities)):
         # Save the processed data to a CSV file
@@ -100,14 +100,19 @@ def plot_data(ax, all_wavelengths, all_intensities, sample_label):
     ax.grid(True)
 
 def main():
-    sample1_path = './Thinfilm_Interference/sample4'
-    sample2_path = './Thinfilm_Interference/sample5'
-
+    sample1_path = 'transmission/Thinfilm_Interference/sample1'
+    sample2_path = 'transmission/Thinfilm_Interference/sample2'
+    sample3_path = 'transmission/Thinfilm_Interference/sample3'
+    sample4_path = 'transmission/Thinfilm_Interference/sample4'
+    sample5_path = 'transmission/Thinfilm_Interference/sample5'
+    
+    print('glob finds',glob.glob(sample1_path+'/*.csv'))
     # Create a figure with subplots
-    fig, axs = plt.subplots(2, 1, figsize=(8, 8))
-
+    fig, axs = plt.subplots(5, 1, figsize=(8, 8))
+    paths = [sample1_path, sample2_path,sample3_path, sample4_path,sample5_path]
+    labels= ['Sample_1','Sample_2','Sample_3','Sample_4', 'Sample_5']
     # Process each sample and plot the data
-    for ax, sample_path, sample_label in zip(axs, [sample1_path, sample2_path], ['Sample_4', 'Sample_5']):
+    for ax, sample_path, sample_label in zip(axs, paths, labels):
 
         all_wavelengths, all_intensities, all_wavelengths_ref, all_intensities_ref = process_sample(sample_path,sample_label)
         #divide out average reference intensity

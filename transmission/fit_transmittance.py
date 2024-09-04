@@ -15,10 +15,10 @@ nbk7 = np.loadtxt('../Thin-Film-Interference-measurements/N-BK7.txt', skiprows=1
 
 # Initial guess for the parameters
 lower_bound = 400
-initial_guess = [2050, 1.6]
-bound = ([1950,1],[2100,1.7])
+initial_guess = [1050, 1.6]
+bound = ([550,1],[1400,1.7])
 # Path to your measurement file
-measurement_file = 'csv_dir/Sample_5/Measurement_average.csv'  # Update this with the actual path to your measurement file
+measurement_file = 'csv_dir/Sample_4/Measurement_average.csv'  # Update this with the actual path to your measurement file
 
 #oldest sample: initial_guess = [90, 1.5]
 # Optimal d1g: 62.0280559817507, Optimal a: 1.6447441706168087
